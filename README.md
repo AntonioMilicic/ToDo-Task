@@ -1,4 +1,7 @@
 # todo-app
+```
+Todo Todo, Todo Todo, Todooooo
+```
 
 ## Project setup
 ```

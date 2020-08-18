@@ -2,7 +2,7 @@
   <div class="add-task">
     <form @submit="addTask">
       <input type="text" v-model="title" name="title" />
-      <button type="submit" style="margin-left:10px;">Add</button>
+      <button type="submit" style="margin-left:10px;" :disabled="!title">Add</button>
     </form>
   </div>
 </template>

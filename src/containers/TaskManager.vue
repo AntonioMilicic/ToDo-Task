@@ -1,21 +1,21 @@
 <template>
-  <div class="manager-wrapper">
-    <Tasks :tasks="tasks" @delete-task="deleteTask" />
+  <div class="task-manager">
+    <app-tasks :tasks="tasks" @delete-task="deleteTask" />
     <hr style="width:30%" />
-    <AddTask @add-task="addTask" />
+    <app-add-task @add-task="addTask" />
     <button class="delete-checked-button" @click="deleteChecked">Delete Checked</button>
   </div>
 </template>
 
 <script>
-import Tasks from "../components/Tasks";
-import AddTask from "../components/AddTask";
+import AppTasks from "../components/Tasks";
+import AppAddTask from "../components/AddTask";
 
 export default {
-  name: "TaskManager",
+  name: "app-task-manager",
   components: {
-    Tasks,
-    AddTask,
+    AppTasks,
+    AppAddTask,
   },
   data() {
     return {

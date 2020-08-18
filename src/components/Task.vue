@@ -3,23 +3,27 @@
     <p
       class="task-title"
       :class="{ 'completed': task.completed }"
-      @click="markCompleted"
+      @click="markCompletedTask"
     >{{ task.title }}</p>
-    <button class="task-delete" @click="$emit('delete-task', task.id)">Delete</button>
+    <button class="task-delete" @click="deleteTask">Delete</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Task",
+  name: "app-task",
   props: ["task"],
   methods: {
-    markCompleted() {
+    markCompletedTask() {
       this.task.completed = !this.task.completed;
+    },
+    deleteTask() {
+      this.$emit("delete-task", this.task.id);
     },
   },
 };
 </script>
+
 <style scoped>
 .task {
   display: flex;

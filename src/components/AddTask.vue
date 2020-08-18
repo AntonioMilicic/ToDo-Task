@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="add-task">
     <form @submit="addTask">
       <input type="text" v-model="title" name="title" />
-      <button type="submit">Add</button>
+      <button type="submit" style="margin-left:10px;">Add</button>
     </form>
   </div>
 </template>
@@ -11,10 +11,10 @@
 import { v4 as uuidv4 } from "uuid";
 
 export default {
-  name: "AddTask",
+  name: "app-add-task",
   data() {
     return {
-      title: "",
+      title: null,
     };
   },
   methods: {

@@ -1,20 +1,20 @@
 <template>
-  <div>
+  <div class="tasks">
     <h2>My To Do To Dooo:</h2>
     <ul style="listStyle:none">
       <li :key="task.id" v-for="task in tasks">
-        <Task :task="task" @delete-task="$emit('delete-task', task.id)" />
+        <app-task :task="task" @delete-task="$emit('delete-task', task.id)" />
       </li>
     </ul>
   </div>
 </template>
 <script>
-import Task from "./Task";
+import AppTask from "./Task";
 
 export default {
-  name: "Tasks",
+  name: "app-tasks",
   components: {
-    Task,
+    AppTask,
   },
   props: ["tasks"],
 };

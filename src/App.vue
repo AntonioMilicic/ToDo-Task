@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import TaskManager from "./containers/task/TaskManager.vue";
+import TaskManager from './containers/task/TaskManager.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     TaskManager,
   },
-};
+}
 </script>
 
 <style>

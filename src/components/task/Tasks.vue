@@ -8,15 +8,15 @@
   </div>
 </template>
 <script>
-import AppTask from "./Task";
+import AppTask from './Task'
 
 export default {
-  name: "app-tasks",
+  name: 'app-tasks',
   components: {
     AppTask,
   },
-  props: ["tasks"],
-};
+  props: ['tasks'],
+}
 </script>
 <style scoped>
 </style>

@@ -11,17 +11,17 @@
 
 <script>
 export default {
-  name: "app-task",
-  props: ["task"],
+  name: 'app-task',
+  props: ['task'],
   methods: {
     markCompletedTask() {
-      this.task.completed = !this.task.completed;
+      this.task.completed = !this.task.completed
     },
     deleteTask() {
-      this.$emit("delete-task", this.task.id);
+      this.$emit('delete-task', this.task.id)
     },
   },
-};
+}
 </script>
 
 <style scoped>

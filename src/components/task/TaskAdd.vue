@@ -8,28 +8,28 @@
 </template>
 
 <script>
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid'
 
 export default {
-  name: "app-add-task",
+  name: 'app-add-task',
   data() {
     return {
       title: null,
-    };
+    }
   },
   methods: {
     addTask(event) {
-      event.preventDefault();
+      event.preventDefault()
       const createdTask = {
         id: uuidv4(),
         title: this.title,
         completed: false,
-      };
-      this.$emit("add-task", createdTask);
-      this.title = "";
+      }
+      this.$emit('add-task', createdTask)
+      this.title = ''
     },
   },
-};
+}
 </script>
 <style scoped>
 </style>
